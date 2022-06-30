@@ -21,7 +21,7 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('comics.index') }}">Comics's list</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Add a new comic</a>
+                    <a class="nav-link" href="{{ route('comics.create') }}">Add a new comic</a>
                   </li>
                 </ul>
               </div>
