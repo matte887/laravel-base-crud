@@ -48,7 +48,9 @@ class PageController extends Controller
      */
     public function show($id)
     {
-        //
+        $comic_details = Comic::find($id);
+        // dd($comic_details);
+        return view('comics.show', compact('comic_details'));
     }
 
     /**
