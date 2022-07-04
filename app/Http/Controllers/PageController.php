@@ -88,15 +88,7 @@ class PageController extends Controller
     public function update(Request $request, $id)
     {
         // Valido i dati inseriti
-        $request->validate([
-            'title'=>'required',
-            'description'=>'required',
-            'thumb'=>'required',
-            'price'=>'required',
-            'series'=>'required',
-            'sale_date'=>'required',
-            'type'=>'required'
-        ]);
+        $request->validate($this->getValidationRules());
 
         $data = $request->all();
         $comic_to_update = Comic::FindOrFail($id);
@@ -114,5 +106,17 @@ class PageController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    private function getValidationRules() {
+        return [
+            'title'=>'required',
+            'description'=>'required',
+            'thumb'=>'required',
+            'price'=>'required',
+            'series'=>'required',
+            'sale_date'=>'required',
+            'type'=>'required'
+        ];
     }
 }
