@@ -2,7 +2,7 @@
 
 @section('main_content')
     {{-- {{dd($comics_list)}} --}}
-    <div class="container">
+    <div class="container mt-5">
         <ul>
             @foreach ($comics_list as $comic)
                 <li>

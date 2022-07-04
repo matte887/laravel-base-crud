@@ -10,5 +10,6 @@
         <p>Series: {{ $comic_details->series }}</p>
         <p>Price: {{ $comic_details->price }}</p>
         <p>Out on: {{ $comic_details->sale_date }}</p>
+        <a class="btn btn-primary" href="{{ route('comics.edit', ['comic' => $comic_details->id]) }}">Modifica</a>
     </div>
 @endsection
