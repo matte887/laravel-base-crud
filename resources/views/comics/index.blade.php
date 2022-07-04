@@ -9,7 +9,7 @@
                     <a href="{{ route('comics.show', ['comic' => $comic->id]) }}">
                         <h4>{{ $comic->title }}</h4>
                     </a>
-                    <p>Series: {{ $comic->serie }}</p>
+                    <p>Series: {{ $comic->series }}</p>
                     <p>Price: {{ $comic->price }}</p>
                 </li>
             @endforeach
