@@ -16,7 +16,7 @@
                 @csrf
                 @method('DELETE')
 
-                <button class="btn btn-danger" type="submit">Elimina</button>
+                <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete di record?')">Elimina</button>
             </form>
         </div>
     </div>
